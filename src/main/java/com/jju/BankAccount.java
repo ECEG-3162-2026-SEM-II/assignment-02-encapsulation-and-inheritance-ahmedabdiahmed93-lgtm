@@ -1,10 +1,10 @@
+package com.jju;
+
+
 public class BankAccount {
-    private String accountHolder;
     protected double balance; // Protected so subclasses can see it, but not the public
 
-    public BankAccount(String accountHolder, double initialBalance) {
-        this.accountHolder = accountHolder;
-        // Student Task: Ensure balance cannot be negative during initialization
+    public BankAccount(String accountHolder) {
     }
 
     public void deposit(double amount) {
