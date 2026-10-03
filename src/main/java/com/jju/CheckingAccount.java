@@ -3,12 +3,18 @@ package com.jju;
 public class CheckingAccount extends BankAccount {
     private static final double TRANSACTION_FEE = 1.50;
 
-  // 1. Student Task: Create constructor and call the superclass constructor and ensure balance is valid
+    public CheckingAccount(String accountHolder , double initialBalance) {
+        super(accountHolder, initialBalance);
+    }
     
 
     @Override
     public void withdraw(double amount) {
        // 2. Student Task: Implement withdraw logic here
+        double totalAmount = amount + TRANSACTION_FEE;
+        if (amount > 0 && balance >= totalAmount) {
+            super.withdraw(totalAmount);
+        }
     }
 
     
